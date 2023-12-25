@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LayoutsDAM2</string>
+    <string name="constraint_tv">Este textView esta constrained</string>
+    <string name="constraint_bt">Este button esta constrained</string>
+</resources>

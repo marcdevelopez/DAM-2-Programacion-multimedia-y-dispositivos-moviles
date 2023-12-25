@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Un LinearLayout como su nombre indica, alinea los elementos uno a continuación del otro
+         en sentido vertical u horizontal, dependiendo de android:orientation...
+    -->
+
+    <!-- El peso del layout será el mismo en todos los layouts: 1
+    Así ocuparán el mismo espacio todos (android:layout_weight="1")-->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:shrinkColumns="0">
+        <!-- En el atributo android:shrinkColumns: Reduce el ancho de la columna seleccionada hasta
+             ajustar la fila al tamaño del padre.
+        -->
+
+        <!-- Cada componente insertado en TableRow corresponderá a una columna de la tabla, pudiendo
+             ser un elemento simple u otro Layout. De esta forma, el número final de filas de la
+             tabla se corresponderá con el número de elementos TableRow insertados; y el número
+             total de columnas quedará determinado por el número de componentes de la fila que más
+             componentes contenga.
+        -->
+        <TableRow>
+            <!-- Esta columna (indice 0) se encogerá hasta ajustar la fila al tamaño del contenedor
+                 padre
+                 El resto de Buttons estarán con la misma anchura para apreciar el efecto.
+                 Este Button estará sin definir su ancho para que aplique shrinkColumns.
+            -->
+            <Button
+                android:layout_height="50dp"
+                android:text="ind 0" />
+
+            <Button
+                android:layout_width="149dp"
+                android:layout_height="50dp"
+                android:text="ind 1" />
+
+            <Button
+                android:layout_width="149dp"
+                android:layout_height="50dp"
+                android:text="ind 2" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:stretchColumns="0">
+
+        <!-- En el atributo android:stretchColumns del TableLayout usamos la columna 1 (indice "0")
+             para rellenar el espacio horizontal restante ampliando el ancho de dicha columna.
+        -->
+
+        <TableRow>
+            <!-- Esta columna (indice 0) se estirará hasta ocupar todo el espacio libre que
+             habría quedado a la derecha de la fila
+             El resto de Buttons estarán con la misma anchura para apreciar el efecto.
+             Este Button estará sin definir su ancho para que aplique stretchColumns-->
+            <Button
+                android:layout_height="50dp"
+                android:text="ind 0" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="ind 1" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="ind 2" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher_round">
+            </ImageView>
+
+    </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/constraint_bt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/constraint_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

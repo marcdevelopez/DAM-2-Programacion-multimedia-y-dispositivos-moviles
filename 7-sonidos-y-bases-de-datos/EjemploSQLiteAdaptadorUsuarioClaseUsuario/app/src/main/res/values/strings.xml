@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ejemplo SQLite 2</string>
+
+    <string name="texto_codigo">Código:</string>
+    <string name="texto_nombre">Nombre:</string>
+    <string name="texto_insertar">Insertar usuario</string>
+    <string name="texto_consultar">Consultar usuarios</string>
+</resources>

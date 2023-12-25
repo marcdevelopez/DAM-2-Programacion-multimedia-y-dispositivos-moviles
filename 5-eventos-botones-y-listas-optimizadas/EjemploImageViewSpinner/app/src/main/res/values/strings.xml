@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ejemplo ImageView Spinner</string>
+    <array name="valores_spinner">
+        <item>Valor 1</item>
+        <item>Valor 2</item>
+        <item>Valor 3</item>
+    </array>
+</resources>
